@@ -25,8 +25,8 @@ exports("getInventory", GetInventory)
 
 1. Ensure you have ESX Framework installed and configured
 2. Install chezza-inventory v3 and add the required exports
-3. Place `bc_camper` in your server's resources folder
-4. Add `ensure bc_camper` to your server.cfg
+3. Place `esx_methcamper` in your server's resources folder
+4. Add `ensure esx_methcamper` to your server.cfg
 5. Configure the resource in `config.lua` if needed
 
 ## Configuration
