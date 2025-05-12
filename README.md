@@ -1,4 +1,4 @@
-# BC Camper
+# ESX Meth Camper
 
 A FiveM resource that allows players to use campers for cooking activities. Players can enter campers, place cooking stations, and manage their cooking process.
 
