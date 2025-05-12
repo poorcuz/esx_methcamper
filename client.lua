@@ -84,7 +84,7 @@ RegisterCommand('toggleCamperLock', function()
             ESX.TriggerServerCallback('bc_camper:toggleLock', function(success)
                 if success then
                     stateTable.isLocked = not stateTable.isLocked
-                    ESX.ShowNotification(stateTable.isLocked and "Du hast den Camper abgeschlossen." or "Du hast den Camper aufgeschlossen.")
+                    ESX.ShowNotification(stateTable.isLocked and Config.Lang.success.camper_locked or Config.Lang.success.camper_unlocked)
                 end
             end, stateTable.currentCamperPlate)
         end
@@ -100,7 +100,7 @@ RegisterCommand('toggleCamperLock', function()
                     ESX.TriggerServerCallback('bc_camper:toggleLock', function(success)
                         if success then
                             stateTable.isLocked = not stateTable.isLocked
-                            ESX.ShowNotification(stateTable.isLocked and "Du hast den Camper abgeschlossen." or "Du hast den Camper aufgeschlossen.")
+                            ESX.ShowNotification(stateTable.isLocked and Config.Lang.success.camper_locked or Config.Lang.success.camper_unlocked)
                         end
                     end, plate)
                 end
@@ -149,7 +149,7 @@ function OpenCookingMenu()
             TriggerEvent("inventory:open", {
                 type = "camper_cooking",
                 id = stateTable.currentCamperPlate,
-                title = "Kochausrüstung",
+                title = Config.Lang.menu.cooking_station,
                 delay = 1000,
                 weight = 200,
                 save = true,
@@ -457,24 +457,24 @@ function OpenBeakerMenu()
     
     if not stateTable.hasPlacedBeaker then
         table.insert(elements, {
-            label = 'Becher platzieren',
+            label = Config.Lang.menu.place_beaker,
             value = 'place'
         })
     else
         table.insert(elements, {
-            label = 'Kochmenü öffnen',
+            label = Config.Lang.menu.open_cooking,
             value = 'openCookingMenu'
         })
         if not stateTable.isCooking then
             table.insert(elements, {
-                label = 'Becher aufheben',
+                label = Config.Lang.menu.pickup_beaker,
                 value = 'pickup'
             })
         end
     end
     
     ESX.UI.Menu.Open('default', GetCurrentResourceName(), 'beaker_menu', {
-        title = 'Becher',
+        title = Config.Lang.menu.beaker_title,
         align = 'top-left',
         elements = elements
     }, function(data, menu)
@@ -523,7 +523,7 @@ function PlaceBeaker()
         
         stateTable.hasPlacedBeaker = true
         stateTable.blockInteraction = false
-        ESX.ShowNotification("Du hast den Becher platziert.")
+        ESX.ShowNotification(Config.Lang.success.beaker_placed)
     end, stateTable.currentCamperPlate)
 end
 
@@ -551,7 +551,7 @@ function PickupBeaker()
     
     stateTable.blockInteraction = false
     stateTable.hasPlacedBeaker = false
-    ESX.ShowNotification("Du hast den Becher aufgehoben.")
+    ESX.ShowNotification(Config.Lang.success.beaker_picked_up)
 end
 
 RegisterNetEvent('bc_camper:usedMeth', function()

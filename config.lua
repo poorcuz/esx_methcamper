@@ -69,6 +69,13 @@ Config = {
             leave_camper = "Drücke E um den Camper zu verlassen",
             cooking_menu = "Drücke E um auf das Kochmenu zuzugreifen"
         },
+        menu = {
+            cooking_station = "Kochstation",
+            beaker_title = "Becher",
+            place_beaker = "Becher platzieren",
+            open_cooking = "Kochmenü öffnen",
+            pickup_beaker = "Becher aufheben"
+        },
         keys = {
             toggle_lock = "Camper verriegeln/entriegeln"
         }
