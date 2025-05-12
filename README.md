@@ -119,7 +119,3 @@ The resource can be further configured in `config.lua`:
 5. Manage ingredients through the inventory system
 
 You can use the configured hotkey to toggle vehicle lock state.
-
-## Support
-
-For support, please contact the developer or create an issue in the repository.
