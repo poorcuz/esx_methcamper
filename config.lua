@@ -37,6 +37,13 @@ Config = {
         processTime = 10000,
     },
 
+    Keys = {
+        toggleLock = {
+            key = "G",
+            label = "Camper verriegeln/entriegeln"
+        }
+    },
+
     Lang = {
         error = {
             no_buckets = "Keine verfügbaren Dimensionen für diesen Camper. Bitte versuche es später erneut.",
@@ -61,6 +68,9 @@ Config = {
             enter_camper = "Drücke E um den Camper zu betreten",
             leave_camper = "Drücke E um den Camper zu verlassen",
             cooking_menu = "Drücke E um auf das Kochmenu zuzugreifen"
+        },
+        keys = {
+            toggle_lock = "Camper verriegeln/entriegeln"
         }
     },
 

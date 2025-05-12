@@ -75,6 +75,17 @@ exports("getInventory", GetInventory)
    end
    ```
 
+4. **Key Bindings**
+   You can customize the key bindings in `config.lua`:
+   ```lua
+   Keys = {
+       toggleLock = {
+           key = "G",  -- Change this to your preferred key
+           label = "Camper verriegeln/entriegeln"  -- Change this to your preferred label
+       }
+   }
+   ```
+
 ### Vehicle Model Limitation
 
 Currently, this resource only works with the "journey" camper model.

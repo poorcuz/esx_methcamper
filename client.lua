@@ -70,7 +70,7 @@ AddEventHandler('bc_camper:syncCookingVehicle', function(vehicleNetId, isCooking
 end)
 
 -- Key Mapping
-RegisterKeyMapping('toggleCamperLock', 'Camper verriegeln/entriegeln', 'keyboard', 'G')
+RegisterKeyMapping('toggleCamperLock', Config.Lang.keys.toggle_lock, 'keyboard', Config.Keys.toggleLock.key)
 RegisterCommand('toggleCamperLock', function()
     local currentTime = GetGameTimer()
     if currentTime - stateTable.lastLockToggle < 1000 then return end
